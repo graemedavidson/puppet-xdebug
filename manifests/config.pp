@@ -1,4 +1,5 @@
 define xdebug::config (
+  $service                = undef,
   $ini_file_path          = undef,
   $default_enable         = undef,
   $remote_enable          = undef,
@@ -13,13 +14,12 @@ define xdebug::config (
   $var_display_max_depth  = undef,
   $profiler_output_dir    = undef,
   $idekey                 = undef,
-  $max_nesting_level      = 50000
-  )
-{
+  $max_nesting_level      = undef
+) {
   file { "$ini_file_path" :
-  content => template('xdebug/ini.erb'),
-  ensure  => present,
-  require => Package['xdebug'],
-  notify  => Service['apache2'],
+    content => template('xdebug/ini.erb'),
+    ensure  => present,
+    require => Package['xdebug'],
+    notify  => Service[$service],
   }
 }
