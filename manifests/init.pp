@@ -41,6 +41,6 @@ class xdebug (
   $idekey                 = $xdebug::params::idekey,
   $max_nesting_level      = $xdebug::params::max_nesting_level
 ) inherits xdebug::params {
-  class { 'dashing::install': }
-  class { 'dashing::config': }
+  class { 'xdebug::install': }
+  class { 'xdebug::config': }
 }
