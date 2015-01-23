@@ -1,0 +1,2 @@
+# puppet-xdebug
+add xdebug
