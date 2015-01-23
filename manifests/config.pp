@@ -1,9 +1,9 @@
 class xdebug::config (
 ) {
   file { "$ini_file_path" :
-    content => template('xdebug/templates/ini.erb'),
+    content => template('xdebug/ini.erb'),
     ensure  => present,
-    require => Package['xdebug'],
+    require => Package[$xdebug::params::pkg],
     notify  => Service[$service],
   }
 }

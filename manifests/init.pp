@@ -38,9 +38,9 @@ class xdebug (
   $var_display_max_data   = $xdebug::params::var_display_max_data,
   $var_display_max_depth  = $xdebug::params::var_display_max_depth,
   $show_exception_trace   = $xdebug::params::remote_autostart,
-  $max_nesting_level      = $xdebug::params::max_nesting_level
+  $max_nesting_level      = $xdebug::params::max_nesting_level,
   $profiler_output_dir    = $xdebug::params::profiler_output_dir,
-  $idekey                 = $xdebug::params::idekey,
+  $idekey                 = $xdebug::params::idekey
 ) inherits xdebug::params {
   class { 'xdebug::install': }
   class { 'xdebug::config': }
