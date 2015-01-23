@@ -6,8 +6,8 @@ class xdebug::params {
       $ini_file = '/etc/php5/mods-available/xdebug.ini'
     }
     'RedHat', 'CentOS', 'Fedora': {
-      $pkg  = 'php-pecl-xdebug'
-      $php  = 'php-fpm'
+      $pkg      = 'php-pecl-xdebug'
+      $php      = 'php-fpm'
       $ini_file = '/etc/php.d/15-xdebug.ini'
     }
     default: {
