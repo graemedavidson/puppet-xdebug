@@ -1,14 +1,14 @@
 class xdebug::params {
   case $::osfamily {
     'Debian', 'Ubuntu': {
-      $pkg      = 'php5-xdebug'
-      $php      = 'php'
-      $ini_file = '/etc/php5/mods-available/xdebug.ini'
+      $pkg          = 'php5-xdebug'
+      $php          = 'php'
+      $ini_file     = '/etc/php5/mods-available/xdebug.ini'
     }
     'RedHat', 'CentOS', 'Fedora': {
-      $pkg      = 'php-pecl-xdebug'
-      $php      = 'php-fpm'
-      $ini_file = '/etc/php.d/xdebug.ini'
+      $pkg          = 'php-pecl-xdebug'
+      $php          = 'php-fpm'
+      $ini_file     = '/etc/php.d/xdebug.ini'
     }
     default: {
       fail("Unsupported platform: ${::osfamily}")
