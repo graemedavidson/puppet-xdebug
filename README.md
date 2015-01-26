@@ -1,12 +1,12 @@
 ## puphpet-xdebug
-================
 
-Tasks
+Tasks Remaining
 -------
 * currently creates a seperate config file seperate from the extension ini file.
 * Hiera config is a bit ugly and could use setting as a hash.
 * Tests
 
+-------
 Puppet module for installing XDEBUG PHP Extension
 
 Installs Xdebug Support.
