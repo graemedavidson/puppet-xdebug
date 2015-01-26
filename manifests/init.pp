@@ -2,14 +2,13 @@
 #
 # Install and configure xdebug
 #
-# === Parameters
+# === Parameters: http://xdebug.org/docs/all_settings
 #  [*service*]                - service to notify (default '')
 #  [*ini_file_path*]          - ini file path (default '')
 #  [*default_enable*]         - default enable xdebug (default '')
 #  [*remote_enable*]          - allow remote connections (default '')
 #  [*remove_connect_back*]    - allow connect back (default '')
 #  [*remote_port*]            - remote port (default '')
-#  [*remote_handler*]         - remote handler (default '')
 #  [*remote_host*]            - remote host (default '')
 #  [*remote_autostart*]       - autostart remote connections (default '')
 #  [*show_local_vars*]        - show local vars (default '')
@@ -31,7 +30,6 @@ class xdebug (
   $remote_connect_back    = $xdebug::params::remote_connect_back,
   $remote_port            = $xdebug::params::remote_port,
   $remote_host            = $xdebug::params::remote_host,
-  $remote_handler         = $xdebug::params::remote_handler,
   $remote_autostart       = $xdebug::params::remote_autostart,    
   $default_enable         = $xdebug::params::default_enable,
   $show_local_vars        = $xdebug::params::show_local_vars,  

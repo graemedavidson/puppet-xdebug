@@ -8,7 +8,7 @@ class xdebug::params {
     'RedHat', 'CentOS', 'Fedora': {
       $pkg      = 'php-pecl-xdebug'
       $php      = 'php-fpm'
-      $ini_file = '/etc/php.d/15-xdebug.ini'
+      $ini_file = '/etc/php.d/xdebug.ini'
     }
     default: {
       fail("Unsupported platform: ${::osfamily}")
@@ -16,7 +16,6 @@ class xdebug::params {
   }
   $service                = 'php-fpm'
   $default_enable         = '1'
-  $remote_handler         = 'dbpg'
   $remote_host            = 'localhost'
   $remote_connect_back    = '1'
   $remote_enable          = '1'
